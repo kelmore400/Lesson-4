@@ -14,6 +14,12 @@ class Task1 extends React.Component {
             .then(resp => resp.json())
             .then(items => this.setState({data: items }));
     }
+    componentWillUpdate() {
+        alert('Component opened');
+    }
+    componentWillUnmount() {
+        alert('Component closed');
+    }
     render() {
         return (
             <div>
